@@ -5,13 +5,12 @@
     "build": "next build",
     "start": "next start",
     "prepare": "husky",
-    "lint-staged": "lint-staged",
-    "lint:next": "next lint"
+    "lint-staged": "lint-staged"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix",
-      "pnpm lint:next",
+      "next lint",
       "prettier --write"
     ],
     "*.{css,scss,md,json}": "prettier --write"
