@@ -4,20 +4,38 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint-staged": "lint-staged",
+    "lint:next": "next lint"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "pnpm lint:next",
+      "prettier --write"
+    ],
+    "*.{css,scss,md,json}": "prettier --write"
   },
   "dependencies": {
     "next": "latest",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "test-with-rspack": "link:"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
+    "@next/eslint-plugin-next": "^15.3.1",
     "@types/node": "^22.10.1",
     "@types/react": "^18.3.12",
+    "eslint": "^9.25.1",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
     "next-rspack": "canary",
+    "prettier": "^3.5.3",
     "typescript": "^5.7.2"
   }
 }

@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "rules": {
+    "react/prop-types": "off", // 关闭 PropTypes 检查（适用于 TypeScript 项目）
+    "@next/next/no-img-element": "warn" // 自定义规则级别
+  }
+}
